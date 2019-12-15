@@ -1,0 +1,462 @@
+.headline2 {
+    background-color: #3D3D3D;
+    width: 100px;
+    position: fixed;
+    height: 100%;
+    z-index: 50;
+    top: 0;
+}
+#mySidenav a {
+    position: absolute;
+    left: 180px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+  }
+  #mySidenav a:hover {
+    left: 0;
+  }
+.headline2 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.headline2 a:hover {
+    color: #000;
+}
+
+.menu1 {
+    height: 65px;
+    width: 50px;
+    margin: 20px;
+}
+@media screen and (max-height: 500px) {
+    .menu2 {
+  visibility: hidden;
+    }
+  }
+.menu2 {
+    height: 50px;
+    width: 50px;
+    margin: 20px;
+}
+
+.box1 {
+    margin: 15px;
+    float: left;
+}
+
+.tabcontent {
+    
+    display: block;
+    position: absolute;
+    width: 100px;
+    left: -100px;
+    z-index: 49;
+    height: 840px;
+    background-color: #4F4F4F;
+    transition: 0.7s;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.tabcontent-text {
+    
+    margin-top: 0;
+    text-align: center;
+    line-height: 73px;
+    margin-left: 200px;
+    padding-top: 85px;
+}
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 62px;
+    height: 10px;
+    background-color: #fff;
+    margin: 11px 0;
+    transition: 0.5s;
+}
+
+.change .bar1{
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-20px, 20px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-9px, -9px);
+}
+
+.box6 {
+    margin: 5px;
+    float: left;
+}
+
+.menu {
+    margin-top: 120px;
+}
+
+.iconProfile {
+    background: url("../images/profile.png");
+    background-repeat: no-repeat;
+}
+
+.iconProfile:hover {
+    background: url("../images/profileB.png");
+    background-repeat: no-repeat;
+}
+
+.iconTimeTable {
+    background: url("../images/timeTable.png");
+    background-repeat: no-repeat;
+}
+
+.iconTimeTable:hover {
+    background: url("../images/timeTableB.png");
+    background-repeat: no-repeat;
+}
+
+.iconFile {
+    background: url("../images/file.png");
+    background-repeat: no-repeat;
+}
+
+.iconFile:hover {
+    background: url("../images/fileB.png");
+    background-repeat: no-repeat;
+}
+
+.iconRegistry {
+    background: url("../images/Registry.png");
+    background-repeat: no-repeat;
+}
+
+.iconRegistry:hover {
+    background: url("../images/RegistryB.png");
+    background-repeat: no-repeat;
+}
+
+.exit1 {
+    position: fixed;
+    bottom: 0px;
+    background: url("../images/exit.png");
+    background-repeat: no-repeat;
+}
+
+.exit
+{
+    margin-top: -450px;
+}
+
+.box-card1
+{
+  overflow-x: hidden;
+  min-width: 1060px;
+  height: 700px;
+  width: 80%;
+    background-color: #F9F9F9;
+    margin: auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+    -o-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+     /* 0px -10px 10px rgba(0, 0, 0, 0.25), 10px 0px 10px rgba(0, 0, 0, 0.25), 0px 10px 10px rgba(0, 0, 0, 0.25); */
+}
+.box-card-profile
+{
+  
+    min-width: 1060px;
+    height: 700px;
+    width: 80%;
+    background-color: #C4C4C4;
+    margin: auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+    -o-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+     /* 0px -10px 10px rgba(0, 0, 0, 0.25), 10px 0px 10px rgba(0, 0, 0, 0.25), 0px 10px 10px rgba(0, 0, 0, 0.25); */
+}
+.box4
+{
+    float: right;
+    margin: 40px;
+}
+.box4 p
+{
+    margin-bottom: 40px;
+    
+}
+.box-spase{
+    margin-top:20px;
+    margin-left: 10%;
+}
+.box-card2
+{
+    height: 150px;
+    width: 400px;
+    background-color: #F9F9F9;
+    margin-bottom: 40px;
+    box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.25), 0px -10px 10px rgba(0, 0, 0, 0.25), 10px 0px 10px rgba(0, 0, 0, 0.25), 0px 10px 10px rgba(0, 0, 0, 0.25);
+}
+.h-card
+{
+    font-weight: bold;
+    font-size: 30pt;
+    padding: 20px;
+    text-align: center;
+    background-color: #C4C4C4;
+}
+.h-on-card
+{
+    font-weight: bold;
+    font-size: 15pt;
+    padding: 10px;
+    text-align: center;
+    background-color: #C4C4C4;
+}
+.box3
+{
+
+    float: left;
+    margin: 40px;
+}
+.exit
+{
+    text-align: center;
+    margin-top: 90px;
+}
+.menubirthday {
+   margin-left: 100px;
+    height: 25px;
+    width:25px;
+    margin-top:-6%;
+    background: url("../images//MyCity.png");
+}
+.icon
+{
+  
+    height: 250px;
+    width: 250px;
+    border-radius:50%;
+    
+}
+.button1 button
+{ 
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: bold;
+    padding: px;
+    font-size: 20pt;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background: #EF8C94;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 25px;
+}
+.name
+{
+    text-align: center;
+    font-size: 25px;
+}
+.personData {
+    height: 25px;
+    width:25px;
+    margin-top:-7%;
+    margin-left:5%;
+}
+.personDataText
+{
+    margin-top:-7%;
+    margin-left:15%; 
+}
+
+     
+
+
+
+.list
+{
+    overflow-y: scroll;
+    float: left;
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 200px;
+    height: 585px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.head-icon{
+margin-left: 20px;
+}
+.lesson
+{
+    font-size: 40pt;
+    text-align: center;
+    margin-top: -30px;
+}
+.page
+{
+    font-size: 40pt;
+    text-align: center;
+   
+    
+}
+.page-color
+{
+  color: darkgrey;
+}
+.page-Timetable
+{
+  font-size: 35pt;
+  text-align: center;
+}
+.accordion {
+    cursor: pointer;
+    padding-left: 30px;
+    padding-top: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    font-weight: bold;
+  }
+  
+  .active, .accordion:hover {
+      
+  }
+  
+  .panel {
+    text-align: left;
+    padding: 0 38px;
+    display: none;
+    overflow: hidden;
+    text-decoration: none;
+    
+  }
+  .content
+  {
+    margin-top: 10px;
+    float: right;
+    margin-right: 5px;
+    width: 840px;
+    height:585px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow-y: scroll;
+    overflow-x: none;
+  }
+  .scroll
+  {
+    overflow-y: scroll;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  img {
+    vertical-align: middle;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .container1 {
+    position: relative;
+    margin-top: 3 5px;
+    margin-left: 180px;
+  }
+  .container1 img
+  {
+    width:80%;
+    height: 300px;
+  }
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    background-color: #F9F9F9;
+    font-weight: bold; 
+    font-size: 50px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: #fff(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+  .arrau
+  {
+    padding: 20px;
+  }

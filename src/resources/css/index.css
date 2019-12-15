@@ -108,3 +108,23 @@ body,
     padding-right: 40px;
     margin: 0 !important;
 }
+.react-contextmenu--visible{
+    background: #fff;
+    text-align: left;
+    border: 0.9px solid #000000;
+    line-height: 30px;
+}
+.head-text{
+    padding: 10px;
+    padding-right: 11px;
+    text-align: center;
+    color: #000;
+    background: fff;
+}
+.body-text{
+    
+    padding: 10px;
+    padding-right: 110px;
+    color: #000;
+    
+}

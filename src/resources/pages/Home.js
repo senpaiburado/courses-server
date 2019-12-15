@@ -13,7 +13,7 @@ export default class Home extends React.Component {
         return <div>
             <Link to="/auth">Login</Link>
             <br/>
-            <Link to="/teacher/info">Cabinet</Link>
+            <Link to="/teacher/">Cabinet</Link>
         </div>
     }
 }
