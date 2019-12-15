@@ -4,12 +4,14 @@ import Card from '@material-ui/core/Card';
 import { Button, Link } from '@material-ui/core';
 import {LoginFormComponent} from './Components/LoginFormComponent';
 import {RegisterFormComponent} from './Components/RegisterFormComponent';
-import { 
+import {
     BrowserRouter as Router,
     Switch,
     Route,
-    
+
   } from "react-router-dom";
+
+import '../css/auth.css';
 
 export class AuthPage extends React.Component {
     constructor(props) {

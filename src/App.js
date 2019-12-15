@@ -12,9 +12,10 @@ import {AuthPage} from './resources/pages/AuthPage';
 import { TeacherCabinet } from "./resources/pages/TeacherCabinet";
 
 export default function App() {
-  return (
+  return (  
     <Router>
         {/* <Home></Home> */}
+
         <Switch>
           <Route path="/auth"> 
             <AuthPage/>
