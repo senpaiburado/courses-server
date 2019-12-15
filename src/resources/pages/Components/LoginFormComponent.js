@@ -26,6 +26,7 @@ export class LoginFormComponent extends React.Component {
     onRouteToRegister() {
         this.props.onRouteToRegister();
     }
+    
 
     onLoginButtonClicked = async () => {
         this.setState({ authProccesing: true });
@@ -54,6 +55,7 @@ export class LoginFormComponent extends React.Component {
             }
         } catch (ex) {
             console.log(ex);
+            this.setState({error: JSON.stringify(ex)});
         }
     }
 
