@@ -7,7 +7,8 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Redirect
+    Redirect,
+    withRouter
 } from "react-router-dom";
 import Cookie from "universal-cookie";
 
@@ -26,12 +27,13 @@ export class LoginFormComponent extends React.Component {
     onRouteToRegister() {
         this.props.onRouteToRegister();
     }
-    
+
 
     onLoginButtonClicked = async () => {
         this.setState({ authProccesing: true });
+        this.setState({error:""})
         try {
-            var response = await fetch("http://localhost:8080/user/login", {
+            let response = await fetch("http://localhost:8080/user/login", {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json",
@@ -45,6 +47,7 @@ export class LoginFormComponent extends React.Component {
             if (response.ok) {
                 let json = await response.json();
                 console.log(json);
+                console.log(this.props)
             } else {
                 if (response.status === 404)
                     this.setState({error: "Аккаунт с указаной почтой не существует!"});
@@ -57,6 +60,7 @@ export class LoginFormComponent extends React.Component {
             console.log(ex);
             this.setState({error: JSON.stringify(ex)});
         }
+        this.setState({ authProccesing: false });
     }
 
     ErrorBlock = () => {

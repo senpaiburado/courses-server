@@ -84,7 +84,7 @@ body {
 }
 
 .container {
-    display: inline-block;
+    /* display: inline-block; */
     cursor: pointer;
 }
 
@@ -175,7 +175,7 @@ body {
 {
   overflow-x: hidden;
   min-width: 1060px;
-  height: 700px;
+  min-height: 90vh;
   width: 80%;
     background-color: #F9F9F9;
     margin: auto;
@@ -189,7 +189,7 @@ body {
 {
   
     min-width: 1060px;
-    height: 700px;
+    min-height: 90vh;
     width: 80%;
     background-color: #C4C4C4;
     margin: auto;
