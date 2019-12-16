@@ -16,13 +16,14 @@ body {
     top: 0;
 }
 #mySidenav a {
+  line-height: 115px;
     position: absolute;
-    left: 180px;
+    left:0px;
     transition: 0.3s;
     padding: 15px;
-    width: 100px;
+    width: 0px;
     text-decoration: none;
-    font-size: 20px;
+    font-size:10pt;
     color: white;
     border-radius: 0 5px 5px 0;
   }
@@ -68,6 +69,7 @@ body {
     left: -100px;
     z-index: 49;
     height: 100%;
+    margin-left: 200px;
     background-color: #4F4F4F;
     transition: 0.7s;
     top: 0px;
@@ -78,13 +80,13 @@ body {
     
     margin-top: 0;
     text-align: center;
-    line-height: 73px;
-    margin-left: 200px;
-    padding-top: 85px;
+    line-height: 173px;
+    padding-top: 75px;
+    
 }
 
 .container {
-    display: inline-block;
+    /* display: inline-block; */
     cursor: pointer;
 }
 
@@ -130,7 +132,7 @@ body {
 }
 
 .iconTimeTable {
-    background: url("../images/timeTable.png");
+    background: url("../images/TimeTableF.png");
     background-repeat: no-repeat;
 }
 
@@ -174,6 +176,7 @@ body {
 .box-card1
 {
   overflow-x: hidden;
+  overflow-y: hidden;
   min-width: 1060px;
   height: 700px;
   width: 80%;
@@ -189,7 +192,7 @@ body {
 {
   
     min-width: 1060px;
-    height: 700px;
+    height:90vh;
     width: 80%;
     background-color: #C4C4C4;
     margin: auto;
@@ -215,10 +218,10 @@ body {
 }
 .box-card2
 {
-    height: 150px;
+    height: 250px;
     width: 400px;
     background-color: #F9F9F9;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.25), 0px -10px 10px rgba(0, 0, 0, 0.25), 10px 0px 10px rgba(0, 0, 0, 0.25), 0px 10px 10px rgba(0, 0, 0, 0.25);
 }
 .h-card
@@ -284,9 +287,10 @@ border-radius: 25px;
     font-size: 25px;
 }
 .personData {
+  
     height: 25px;
     width:25px;
-    margin-top:-7%;
+    margin-top:9%;
     margin-left:5%;
 }
 .personDataText
@@ -295,9 +299,15 @@ border-radius: 25px;
     margin-left:15%; 
 }
 
-     
+.Bmenu{
+  line-height: 30px;
+}
 
-
+@media screen and (max-width: 1400px) {
+  .list {
+    min-width: 195px;
+  }
+}
 
 .list
 {
@@ -305,8 +315,8 @@ border-radius: 25px;
     float: left;
     margin-top: 10px;
     margin-left: 5px;
-    width: 200px;
-    height: 585px;
+    width: 10vw;
+    height: 70vh;
     background-color: #fff;
     border-radius: 10px;
 }
@@ -360,13 +370,19 @@ margin-left: 20px;
     text-decoration: none;
     
   }
+  @media screen and (max-width: 1200px) {
+    .content {
+      width: 840px;
+    }
+  }
   .content
   {
     margin-top: 10px;
     float: right;
     margin-right: 5px;
-    width: 840px;
-    height:585px;
+    width: 60vw;
+    min-width: 840px;
+    height:70vh;
     background-color: #fff;
     border-radius: 10px;
     overflow-y: scroll;
@@ -388,12 +404,12 @@ margin-left: 20px;
   .container1 {
     position: relative;
     margin-top: 3 5px;
-    margin-left: 180px;
+    margin-left: 5%;
   }
   .container1 img
   {
-    width:80%;
-    height: 300px;
+    width:55vw;
+    height: 40vh;
   }
   /* Hide the images by default */
   .mySlides {

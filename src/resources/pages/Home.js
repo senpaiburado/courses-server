@@ -82,7 +82,7 @@ export default class Home extends React.Component {
 
                                 <div className="icon-text-list">
                                     <div className="icon-text-list-col1">
-                                        <img src={require("../images/timetable.png")} alt="" />
+                                        <img src={require("../images/timeTable.png")} alt="" />
                                     </div>
                                     <div className="icon-text-list-col2">
                                         Уроки в удобное для Вас время

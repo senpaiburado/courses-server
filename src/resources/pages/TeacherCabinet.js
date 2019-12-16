@@ -44,11 +44,12 @@ export class TeacherCabinet extends React.Component {
 
 
                     {this.state.isMenuOpened ? (<div id="mySidenav" className="">
-                        <div className="tabcontent tabcontent-text ">
-                            <p><a href="#">ПРОФІЛЬ</a></p>
-                            <p><a href="#">КАЛЕНДАР</a></p>
-                            <p><a href="#">МАТЕРІАЛИ</a></p>
-                            <p><a href="#">ЖУРНАЛ</a></p>
+                        <div className="tabcontent ">
+                       
+                            <p className=" tabcontent-text "><a href="#">ПРОФІЛЬ</a></p>
+                            <p className=" tabcontent-text "><a href="#">КАЛЕНДАР</a></p>
+                            <p className=" tabcontent-text "><a href="#">МАТЕРІАЛИ</a></p>
+                            <p className=" tabcontent-text "><a href="#">ЖУРНАЛ</a></p>
                         </div>
                     </div>) : ''}
                     <div className="menu">
