@@ -76,7 +76,7 @@ export class Profile extends React.Component {
                             <div className="h-on-card">ОСНОВНОЕ</div>
                             <p>
                                 <img className="personData" src={require("../../images/birthday.png")} alt=""></img>
-                                <div className="personDataText">{this.state.birthdate}</div>
+                                <div className="personDataText">{this.state.birthdate ? new Date(this.state.birthdate).to : ""}</div>
                             </p>
                             <p>
                                 <img className="personData" src={require("../../images/MyCity.png")} alt=""></img>

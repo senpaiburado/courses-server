@@ -1,21 +1,43 @@
-
-.react-contextmenu--visible{
+.react-contextmenu--visible {
     background: #fff;
-    text-align: left;
+    width: 350px;
+    height: 200px;
     border: 0.9px solid #000000;
     line-height: 30px;
+    flex-direction: row;
+    font-size: 20px;
 }
-.head-text{
+
+.head-text {
     padding: 10px;
     padding-right: 11px;
     text-align: center;
     color: #000;
     background: fff;
 }
-.body-text{
-    
+
+.body-textL {
+    margin-left: 20px;
+    float: left;
+}
+
+.body-textR {
+    margin-right: 20px;
+    float: right;
+}
+
+.body-buttonL {
+    font-size: 15px;
     padding: 10px;
-    padding-right: 110px;
-    color: #000;
-    
+    margin-left: 20px;
+    margin-top: 70px;
+    float: left;
+}
+
+.body-buttonR {
+    font-size: 15px;
+    padding: 10px;
+    margin-right: 20px;
+    margin-top: 70px;
+    float: right;
 }

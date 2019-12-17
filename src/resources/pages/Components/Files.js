@@ -26,7 +26,7 @@ export class Files extends React.Component {
             <div className="box-spase ">
                 <div class="box-card-profile">
                     <div>
-                        <div class="h-card"> КОНТАКТИ</div>
+                        <div class="h-card"> МАТЕРИАЛЫ</div>
                         <div class="list ">
                             <FilesView />
                         </div>
@@ -38,9 +38,9 @@ export class Files extends React.Component {
                         </div>
                         <div class="page">
                             <p>
-                                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                                <a class="prev" href="#">❮</a>
                                 <din className="page-color"> 1/32 </din>
-                                <a class="next" onclick="plusSlides(1)">❯</a>
+                                <a class="next" href="#">❯</a>
                             </p>
                         </div>
                         <div class="container1">

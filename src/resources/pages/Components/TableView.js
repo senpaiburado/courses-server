@@ -111,17 +111,24 @@ export default function CustomizedTables() {
         ))}
       </TableBody>
       <ContextMenu id="some_unique_identifier">
-        <MenuItem className="head-text" data={{ foo: 'bar' }} onClick={handleClick}>
-          Урок
-        </MenuItem>
-        <MenuItem className="body-text" data={{ foo: 'bar' }} onClick={handleClick}>
-          Заблокувати
-        </MenuItem>
+        <div className="head-text" data={{ foo: 'bar' }} onClick={handleClick}>
+          Время
+        </div>
+        <div className="container">
+        <div className="body-textL ">
+          9:00
+        </div>
         <MenuItem divider />
-        <MenuItem className="body-text" data={{ foo: 'bar' }} onClick={handleClick}>
-          Заблокувати на коден день
-        </MenuItem>
-      </ContextMenu>
+        <div className="body-textR" data={{ foo: 'bar' }} onClick={handleClick}>
+          10:00
+        </div>
+        <div className="clear"></div>
+        
+        <div className="clear"></div>
+        <button className="body-buttonL">Сохранить</button>
+        <button className="body-buttonR">Отмена</button>
+        </div>
+      </ContextMenu>  
     </Table>
 
 
