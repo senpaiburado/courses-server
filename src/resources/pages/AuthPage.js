@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 import React from 'react';
 import TextField from "@material-ui/core/TextField";
 import Card from '@material-ui/core/Card';
@@ -12,6 +13,7 @@ import {
   } from "react-router-dom";
 
 import '../css/auth.css';
+import Cookies from 'universal-cookie';
 
 export class AuthPage extends React.Component {
     constructor(props) {
@@ -19,6 +21,11 @@ export class AuthPage extends React.Component {
         this.state = {
             isLogin: true
         }
+        let cookies = new Cookies().get("cookies");
+        console.log(cookies);
+        // if (cookies) {
+        //     cookies.isStudent ? location.href = "/teacher" : location.href = "/student";
+        // }
     }
 
     setIsLogin(isLogin) {

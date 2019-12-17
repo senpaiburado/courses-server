@@ -177,7 +177,7 @@ body {
   overflow-x: hidden;
   overflow-y: hidden;
   min-width: 1060px;
-  height: 700px;
+  min-height: 90vh;
   width: 80%;
     background-color: #F9F9F9;
     margin: auto;
@@ -514,4 +514,15 @@ margin-left: 20px;
   .arrau
   {
     padding: 20px;
+  }
+
+  .MuiTypography-body1 {
+    font-size: 1.7rem !important;
+  }
+
+  .content p {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
   }

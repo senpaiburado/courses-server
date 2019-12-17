@@ -12,10 +12,11 @@ import {
 } from "react-router-dom";
 import "../css/TeacherCabinet.css"
 
-import {Profile} from "./Components/Profile";
-import {Files} from "./Components/Files";
-import {Timetable} from "./Components/Timetable";
-import {Registry} from "./Components/Registry";
+import { Profile } from "./Components/Profile";
+import { Files } from "./Components/Files";
+import { Timetable } from "./Components/Timetable";
+import { Registry } from "./Components/Registry";
+import Cookies from 'universal-cookie';
 
 export class TeacherCabinet extends React.Component {
     constructor(props) {
@@ -23,6 +24,7 @@ export class TeacherCabinet extends React.Component {
         this.state = {
             isMenuOpened: false
         }
+        // new Cookies().remove("cookies")
     }
 
     open() {
@@ -30,7 +32,7 @@ export class TeacherCabinet extends React.Component {
     }
     render() {
         return (
-            <div style={{width: "100%", height: "100%"}}>
+            <div style={{ width: "100%", height: "100%" }}>
                 <div className="headline2 ">
                     <div className="box1">
 
@@ -54,16 +56,16 @@ export class TeacherCabinet extends React.Component {
                     </div>) : ''}
                     <div className="menu">
                         <Link to="/teacher">
-                        <div className="menu1 iconProfile"></div>
+                            <div className="menu1 iconProfile"></div>
                         </Link>
                         <Link to="/teacher/timetable">
-                        <div className="menu1 iconTimeTable"></div>
+                            <div className="menu1 iconTimeTable"></div>
                         </Link>
                         <Link to="/teacher/files">
-                        <div className="menu1 iconFile"></div>
+                            <div className="menu1 iconFile"></div>
                         </Link>
                         <Link to="/teacher/registry" >
-                        <div className="menu1 iconRegistry"></div>
+                            <div className="menu1 iconRegistry"></div>
                         </Link>
                     </div>
                     <Link to="/teacher/registry" >
@@ -72,20 +74,20 @@ export class TeacherCabinet extends React.Component {
                 </div>
                 <Switch>
                     <Route exact path="/teacher">
-                        <Profile/>
+                        <Profile />
                     </Route>
                     <Route path="/teacher/files">
-                        <Files/>
+                        <Files />
                     </Route>
                     <Route path="/teacher/timetable">
-                        <Timetable/>
+                        <Timetable />
                     </Route>
                     <Route path="/teacher/Registry">
-                        <Registry/>
+                        <Registry />
                     </Route>
                 </Switch>
-                
-        </div>
+
+            </div>
         );
     }
 }
