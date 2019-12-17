@@ -15,7 +15,9 @@ export class RegisterFormComponent extends React.Component {
             firstname: '',
             lastname: '',
             birthdate: null,
+            phone: '',
             type: '',
+            repeatPass: '',
             signUpProccessing: false
         }
         this.cookies = new Cookie();
@@ -26,8 +28,35 @@ export class RegisterFormComponent extends React.Component {
     }
 
     onSignUpClicked = async () => {
-        this.setState({ signUpProccessing: true });
         this.setState({ error: "" });
+
+        const { email, password, birthdate, firstname, lastname, phone } = this.state;
+        if (email === '') {
+            this.setState({error: "Заполните электронную почту"});
+            return;
+        }
+        if (phone === '') {
+            this.setState({error: "Заполните номер телефона"});
+            return;
+        }
+        if (password === '') {
+            this.setState({error: "Заполните пароль"});
+            return;
+        }
+        if (birthdate === null) {
+            this.setState({error: "Заполните дату рождения"});
+            return;
+        }
+        if (firstname === '') {
+            this.setState({error: "Заполните имя"});
+            return;
+        }
+        if (lastname === '') {
+            this.setState({error: "Заполните фамилию"});
+            return;
+        }
+
+        this.setState({ signUpProccessing: true });
         const data = this.state;
         try {
             let response = await fetch("http://localhost:8080/user/register", {
@@ -37,6 +66,7 @@ export class RegisterFormComponent extends React.Component {
                 },
                 body: JSON.stringify({
                     email: data.email,
+                    phone: data.phone,
                     password: data.password,
                     firstname: data.firstname,
                     lastname: data.lastname,
@@ -46,8 +76,9 @@ export class RegisterFormComponent extends React.Component {
             console.log(response);
             if (response.ok) {
                 let json = await response.json();
-                if (json.cookieKey)
-                    this.cookies.set('cookie-key', json.cookieKey);
+                console.log(JSON.stringify(json));
+                if (json.data)
+                    this.cookies.set('cookies', json.data);
             } else {
                 console.log(response)
                 if (response.status === 421)
@@ -57,7 +88,7 @@ export class RegisterFormComponent extends React.Component {
             }
         } catch (ex) {
             console.log(ex);
-            this.setState({ error: ex });
+            // this.setState({ error: ex });
         }
         this.setState({ signUpProccessing: false });
     }
@@ -72,6 +103,15 @@ export class RegisterFormComponent extends React.Component {
                 </div>
             </div>
         )
+    }
+
+    comparePasswords = () => {
+        const { password, repeatPass } = this.state;
+        console.log(password, repeatPass)
+        if (password === repeatPass) 
+            this.setState({error: ""});
+        else
+            this.setState({error: "Пароли не совпадают!"})
     }
 
     render() {
@@ -109,15 +149,25 @@ export class RegisterFormComponent extends React.Component {
                     </div>
                     <div className="formGroup">
                         <div style={{ margin: "auto" }}>
+                            <TextField label="Номер телефону" margin="normal" variant="outlined" type="phone" name="phone"
+                                onChange={(event) => { this.setState({ phone: event.target.value }) }} required disabled={this.state.signUpProccessing} />
+                        </div>
+                    </div>
+                    <div className="formGroup">
+                        <div style={{ margin: "auto" }}>
                             <TextField label="Пароль" margin="normal" variant="outlined" type="password" hintText="Password"
-                                floatingLabelText="Password" name="password" required onChange={(event) => { this.setState({ password: event.target.value }) }}
+                                floatingLabelText="Password" name="password" required onChange={(event) => { this.setState({ password: event.target.value }, () => {
+                                    this.comparePasswords();
+                                }); }}
                                 disabled={this.state.signUpProccessing} />
                         </div>
                     </div>
                     <div className="formGroup">
                         <div style={{ margin: "auto" }}>
                             <TextField label="Підтвердження паролю" margin="normal" variant="outlined" type="password" hintText="Password"
-                                floatingLabelText="Password" name="password" required onChange={(event) => { }}
+                                floatingLabelText="Password" name="password" required onChange={(event) => { this.setState({ repeatPass: event.target.value }, () => {
+                                    this.comparePasswords();
+                                }); }}
                                 disabled={this.state.signUpProccessing} />
                         </div>
                     </div>

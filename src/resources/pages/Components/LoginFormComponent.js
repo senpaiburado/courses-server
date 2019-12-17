@@ -30,8 +30,16 @@ export class LoginFormComponent extends React.Component {
 
 
     onLoginButtonClicked = async () => {
-        this.setState({ authProccesing: true });
         this.setState({error:""})
+        if (this.state.email === '') {
+            this.setState({error: "Заполните электронную почту"});
+            return;
+        }
+        if (this.state.password === '') {
+            this.setState({error: "Заполните пароль"});
+            return;
+        }
+        this.setState({ authProccesing: true });
         try {
             let response = await fetch("http://localhost:8080/user/login", {
                 method: 'POST',
@@ -46,8 +54,8 @@ export class LoginFormComponent extends React.Component {
             console.log(response);
             if (response.ok) {
                 let json = await response.json();
-                console.log(json);
-                console.log(this.props)
+                if (json.data)
+                    new Cookie().set("cookies", json.data);
             } else {
                 if (response.status === 404)
                     this.setState({error: "Аккаунт с указаной почтой не существует!"});

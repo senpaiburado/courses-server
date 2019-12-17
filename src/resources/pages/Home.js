@@ -4,8 +4,19 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import '../css/home.css';
 import { Card, TextField } from "@material-ui/core";
+import Cookies from "universal-cookie";
 
 export default class Home extends React.Component {
+
+    getLoginPath = () => {
+        let cookies = new Cookies().get("cookies");
+        if (cookies) {
+            if (cookies.isStudent)
+                return "/student";
+            return "/teacher";
+        }
+        return "/auth";
+    }
 
     render() {
         return (
@@ -31,7 +42,7 @@ export default class Home extends React.Component {
                             <li className="small-logo"><a href="#enter-screen"><img src={require("../images/logo.png")} alt="" /></a></li>
                             <li><a href="#faq">Вопросы</a></li>
                             <li><a href="#free-lesson-title">Пробный урок</a></li>
-                            <li><a href="/auth">Ввойти</a></li>
+                            <li><a href={this.getLoginPath()}>Ввойти</a></li>
                         </ul>
 
                         <a className="res-nav_click" href="#"><i className="fa fa-bars"></i></a>
@@ -82,7 +93,7 @@ export default class Home extends React.Component {
 
                                 <div className="icon-text-list">
                                     <div className="icon-text-list-col1">
-                                        <img src={require("../images/timetable.png")} alt="" />
+                                        <img src={require("../images/timeTable.png")} alt="" />
                                     </div>
                                     <div className="icon-text-list-col2">
                                         Уроки в удобное для Вас время

@@ -16,6 +16,7 @@ import { Profile } from "./Components/Profile";
 import { Files } from "./Components/Files";
 import { Timetable } from "./Components/Timetable";
 import { Registry } from "./Components/Registry";
+import Cookies from 'universal-cookie';
 
 export class TeacherCabinet extends React.Component {
     constructor(props) {
@@ -23,6 +24,7 @@ export class TeacherCabinet extends React.Component {
         this.state = {
             isMenuOpened: false
         }
+        // new Cookies().remove("cookies")
     }
 
     open() {
@@ -44,11 +46,12 @@ export class TeacherCabinet extends React.Component {
 
 
                     {this.state.isMenuOpened ? (<div id="mySidenav" className="">
-                        <div className="tabcontent tabcontent-text ">
-                            <p><a href="#">ПРОФІЛЬ</a></p>
-                            <p><a href="#">КАЛЕНДАР</a></p>
-                            <p><a href="#">МАТЕРІАЛИ</a></p>
-                            <p><a href="#">ЖУРНАЛ</a></p>
+                        <div className="tabcontent ">
+                       
+                            <p className=" tabcontent-text "><a href="#">ПРОФІЛЬ</a></p>
+                            <p className=" tabcontent-text "><a href="#">КАЛЕНДАР</a></p>
+                            <p className=" tabcontent-text "><a href="#">МАТЕРІАЛИ</a></p>
+                            <p className=" tabcontent-text "><a href="#">ЖУРНАЛ</a></p>
                         </div>
                     </div>) : ''}
                     <div className="menu">

@@ -15,12 +15,46 @@ export class Timetable extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isMenuOpened: false
+            isMenuOpened: false,
+            startMonth: '',
+            startDay: 0,
+            endMonth: '',
+            endDay: 0
         }
+        this.currDate = new Date();
     }
 
-    open() {
+    componentWillMount() {
+        this.setState({startMonth: this.monthNames[this.getMonday(this.currDate).getMonth()], endMonth: this.monthNames[this.endDate().getMonth()],
+                       startDay: this.getMonday(this.currDate).getDate(), endDay: this.endDate().getDate()})
+    }
 
+    monthNames = ["ЯНВАРЬ", "ФЕВРАЛЬ", "МАРТ", "АПРЕЛЬ", "МАЙ", "ИЮНЬ", "ИЮЛЬ", "АВГУСТ", "СЕНТЯБРЬ", "ОКТЯБРЬ", "НОЯБРЬ", "ДЕКАБРЬ"];
+
+    nextWeek = () => {
+        this.currDate.setDate(this.currDate.getDate() + 7);
+        this.setState({startMonth: this.monthNames[this.getMonday(this.currDate).getMonth()], endMonth: this.monthNames[this.endDate().getMonth()],
+            startDay: this.getMonday(this.currDate).getDate(), endDay: this.endDate().getDate()})
+    }
+
+    prevWeek = () => {
+        this.currDate.setDate(this.currDate.getDate() - 7);
+        this.setState({startMonth: this.monthNames[this.getMonday(this.currDate).getMonth()], endMonth: this.monthNames[this.endDate().getMonth()],
+            startDay: this.getMonday(this.currDate).getDate(), endDay: this.endDate().getDate()})
+    }
+
+    getMonday( date = new Date() ) {
+        var day = date.getDay() || 7;  
+        if( day !== 1 ) 
+            date.setHours(-24 * (day - 1)); 
+        return date;
+    }
+
+    endDate() {
+        
+        let start = this.getMonday(this.currDate);
+        start.setDate(start.getDate() + 6);
+        return start;
     }
     render() {
         return (
@@ -30,9 +64,9 @@ export class Timetable extends React.Component {
                         <div class="h-card"> РАСПИСАНИЕ</div>
                         <div class="page-Timetable">
                             <p>
-                                <a class="prev" onclick="plusSlides(-1)">❮</a>
-                                <din className="arrau"> НОЯБРЬ 28 - ДЕКАБРЬ 05  </din>
-                                <a class="next" onclick="plusSlides(1)">❯</a>
+                                <a class="prev" href="javascript:void(0)" onClick={() => this.prevWeek()}>❮</a>
+                                <din className="arrau"> {this.state.startMonth} {this.state.startDay} - {this.state.endMonth} {this.state.endDay}  </din>
+                                <a class="next" href="javascript:void(0)" onClick={() => this.nextWeek()}>❯</a>
                             </p>
                         </div>
                         <TableView/>
