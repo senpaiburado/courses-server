@@ -34,7 +34,7 @@ export class TeacherCabinet extends React.Component {
                 <div className="headline2 ">
                     <div className="box1">
 
-                        <div className={`container ${this.state.isMenuOpened ? "change" :''}`} onClick={() => { this.setState({ isMenuOpened: !this.state.isMenuOpened }) }}
+                        <div className={`containerM ${this.state.isMenuOpened ? "change" :''}`} onClick={() => { this.setState({ isMenuOpened: !this.state.isMenuOpened }) }}
                             style={{width: "auto"}}>
                             <div className="bar1"></div>
                             <div className="bar2"></div>
@@ -66,7 +66,9 @@ export class TeacherCabinet extends React.Component {
                         <div className="menu1 iconRegistry"></div>
                         </Link>
                     </div>
+                    <Link to="/teacher/registry" >
                     <div className="exit1 menu2"></div>
+                    </Link>
                 </div>
                 <Switch>
                     <Route exact path="/teacher">

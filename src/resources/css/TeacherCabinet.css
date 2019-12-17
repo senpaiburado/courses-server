@@ -23,7 +23,7 @@ body {
     padding: 15px;
     width: 0px;
     text-decoration: none;
-    font-size:10pt;
+    font-size:11pt;
     color: white;
     border-radius: 0 5px 5px 0;
   }
@@ -57,15 +57,15 @@ body {
 
 .box1 {
     margin-left: 0px !important;
-    margin: 15px;
-    float: left;
+    margin: 20px;
+    float: right;
 }
 
 .tabcontent {
-    
+  
     display: block;
     position: absolute;
-    width: 100px;
+    width: 110px;
     left: -100px;
     z-index: 49;
     height: 100%;
@@ -80,12 +80,11 @@ body {
     
     margin-top: 0;
     text-align: center;
-    line-height: 173px;
-    padding-top: 75px;
+    padding-top: 71px;
     
 }
 
-.container {
+.containerM {
     /* display: inline-block; */
     cursor: pointer;
 }
@@ -167,12 +166,12 @@ body {
     background: url("../images/exit.png");
     background-repeat: no-repeat;
 }
-
-.exit
-{
-    margin-top: -450px;
+.exit1:hover {
+  position: fixed;
+  bottom: 0px;
+  background: url("../images/exitB.png");
+  background-repeat: no-repeat;
 }
-
 .box-card1
 {
   overflow-x: hidden;
@@ -188,9 +187,7 @@ body {
     -o-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
      /* 0px -10px 10px rgba(0, 0, 0, 0.25), 10px 0px 10px rgba(0, 0, 0, 0.25), 0px 10px 10px rgba(0, 0, 0, 0.25); */
 }
-.box-card-profile
-{
-  
+.box-card-profile{
     min-width: 1060px;
     height:90vh;
     width: 80%;
@@ -249,7 +246,7 @@ body {
 .exit
 {
     text-align: center;
-    margin-top: 90px;
+    margin-top: 140px;
 }
 .menubirthday {
    margin-left: 100px;
@@ -261,8 +258,8 @@ body {
 .icon
 {
   
-    height: 250px;
-    width: 250px;
+    height: 300px;
+    width: 300px;
     border-radius:50%;
     
 }
@@ -283,6 +280,7 @@ border-radius: 25px;
 }
 .name
 {
+    margin-top: 20px;
     text-align: center;
     font-size: 25px;
 }
@@ -290,15 +288,15 @@ border-radius: 25px;
   
     height: 25px;
     width:25px;
-    margin-top:9%;
+    margin-top:10%;
     margin-left:5%;
 }
 .personDataText
 {
     margin-top:-7%;
     margin-left:15%; 
+    font-size: 15pt;
 }
-
 .Bmenu{
   line-height: 30px;
 }
@@ -316,7 +314,7 @@ border-radius: 25px;
     margin-top: 10px;
     margin-left: 5px;
     width: 10vw;
-    height: 70vh;
+    height: 75vh;
     background-color: #fff;
     border-radius: 10px;
 }
@@ -382,7 +380,7 @@ margin-left: 20px;
     margin-right: 5px;
     width: 60vw;
     min-width: 840px;
-    height:70vh;
+    height:75vh;
     background-color: #fff;
     border-radius: 10px;
     overflow-y: scroll;
@@ -424,7 +422,8 @@ margin-left: 20px;
   /* Next & previous buttons */
   .prev,
   .next {
-    background-color: #F9F9F9;
+    color: #000;
+    text-decoration: none;
     font-weight: bold; 
     font-size: 50px;
     border-radius: 0 3px 3px 0;

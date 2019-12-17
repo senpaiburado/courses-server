@@ -30,9 +30,9 @@ export class Timetable extends React.Component {
                         <div class="h-card"> РАСПИСАНИЕ</div>
                         <div class="page-Timetable">
                             <p>
-                                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                                <a class="prev" href="#">❮</a>
                                 <din className="arrau"> НОЯБРЬ 28 - ДЕКАБРЬ 05  </din>
-                                <a class="next" onclick="plusSlides(1)">❯</a>
+                                <a class="next"href="#">❯</a>
                             </p>
                         </div>
                         <TableView/>

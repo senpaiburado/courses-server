@@ -29,7 +29,7 @@ export class Profile extends React.Component {
                         <img className="icon" src={require("../../images/1.jpg")}></img>
                         <p className="name">VLADIMER LENIN</p>
                         <div className="exit button1">
-                            <button href="#">ВИХІД</button>
+                            <button>ВИХІД</button>
                         </div>
 
                     </div>
