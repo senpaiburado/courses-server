@@ -117,7 +117,7 @@ export default function CustomizedTables() {
         ))}
       </TableBody>
       <ContextMenu id="some_unique_identifier">
-        <div className="head-text" data={{ foo: 'bar' }} onClick={handleClick}>
+        <div className="head-text1" data={{ foo: 'bar' }} onClick={handleClick}>
           Время
         </div>
         <div className="container">
