@@ -46,7 +46,7 @@ export class Profile extends React.Component {
                    console.log(this.state)
                } else {
                    if (response.status === 403) {
-                       new Cookies().remove("cookies");
+                       new Cookies().remove("cookies", { path: '/' });
                        location.href = "/";
                    }
                }
@@ -66,7 +66,11 @@ export class Profile extends React.Component {
                         <img className="icon" src={require("../../images/1.jpg")} alt=""></img>
                         <p className="name">{this.state.fullname}</p>
                         <div className="exit button1">
-                            <button href="#">ВЫХОД</button>
+                            <button href="#" onClick={() => {
+                                let cookies = new Cookies();
+                                cookies.remove("cookies", { path: '/' });
+                                location.href = '/'
+                            }}>ВЫХОД</button>
                         </div>
 
                     </div>
@@ -76,7 +80,7 @@ export class Profile extends React.Component {
                             <div className="h-on-card">ОСНОВНОЕ</div>
                             <p>
                                 <img className="personData" src={require("../../images/birthday.png")} alt=""></img>
-                                <div className="personDataText">{this.state.birthdate ? new Date(this.state.birthdate).to : ""}</div>
+                                <div className="personDataText">{this.state.birthdate ? new Date(this.state.birthdate).toLocaleDateString() : ""}</div>
                             </p>
                             <p>
                                 <img className="personData" src={require("../../images/MyCity.png")} alt=""></img>

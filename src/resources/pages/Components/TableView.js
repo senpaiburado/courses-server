@@ -92,7 +92,9 @@ export default function CustomizedTables() {
           <StyledTableRow key={row.name}>
 
             {/* NOTICE: id must be unique for EVERY instance */}
-            <StyledTableCell align="left"><ContextMenuTrigger id="some_unique_identifier">{row.monday}</ContextMenuTrigger>
+            <StyledTableCell align="left"><ContextMenuTrigger id="some_unique_identifier">{row.monday}<StyledTableCell align="left"><ContextMenuTrigger id="some_unique_identifier">{row.monday}</ContextMenuTrigger>
+            </StyledTableCell><StyledTableCell align="left"><ContextMenuTrigger id="some_unique_identifier">{row.monday}</ContextMenuTrigger>
+            </StyledTableCell></ContextMenuTrigger>
             </StyledTableCell>
             <StyledTableCell align="left"><ContextMenuTrigger id="some_unique_identifier">{row.tuesday}</ContextMenuTrigger>
             </StyledTableCell>

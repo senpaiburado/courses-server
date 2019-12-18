@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 import React from 'react';
 import TextField from "@material-ui/core/TextField";
 import Card from '@material-ui/core/Card';
@@ -48,9 +49,9 @@ export class TeacherCabinet extends React.Component {
                     {this.state.isMenuOpened ? (<div id="mySidenav" className="">
                         <div className="tabcontent ">
                        
-                            <p className=" tabcontent-text "><a href="#">ПРОФІЛЬ</a></p>
-                            <p className=" tabcontent-text "><a href="#">КАЛЕНДАР</a></p>
-                            <p className=" tabcontent-text "><a href="#">МАТЕРІАЛИ</a></p>
+                            <p className=" tabcontent-text "><a href="#">ПРОФИЛЬ</a></p>
+                            <p className=" tabcontent-text "><a href="#">РАСПИСАНИЕ</a></p>
+                            <p className=" tabcontent-text "><a href="#">МАТЕРИАЛЫ</a></p>
                             <p className=" tabcontent-text "><a href="#">ЖУРНАЛ</a></p>
                         </div>
                     </div>) : ''}
@@ -69,7 +70,7 @@ export class TeacherCabinet extends React.Component {
                         </Link>
                     </div>
                     <Link to="/teacher/registry" >
-                    <div className="exit1 menu2"></div>
+                    <div className="exit1 menu2" onClick={ () => { location.href = "/" } }></div>
                     </Link>
                 </div>
                 <Switch>

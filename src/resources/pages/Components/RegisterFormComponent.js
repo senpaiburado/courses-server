@@ -70,7 +70,8 @@ export class RegisterFormComponent extends React.Component {
                     password: data.password,
                     firstname: data.firstname,
                     lastname: data.lastname,
-                    birthdate: data.birthdate
+                    birthdate: data.birthdate,
+                    type: data.type
                 })
             });
             console.log(response);

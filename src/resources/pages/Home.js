@@ -20,7 +20,7 @@ export default class Home extends React.Component {
 
     render() {
         return (
-            <div style={{ width: "100%", height: "100%" }}>
+            <div style={{ width: "100%", height: "100vh" }}>
                 <div id="enter-screen" style={{ width: "100%", height: "100%" }}>
                     <div className="container">
                         <figure className="logo animated fadeInDown delay-07s">
