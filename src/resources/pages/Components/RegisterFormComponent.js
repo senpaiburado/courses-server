@@ -59,7 +59,7 @@ export class RegisterFormComponent extends React.Component {
         this.setState({ signUpProccessing: true });
         const data = this.state;
         try {
-            let response = await fetch("http://localhost:8080/user/register", {
+            let response = await fetch("http://10.0.1.141:8080/user/register", {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json",

@@ -9,6 +9,7 @@
 }
 
 .head-text {
+    margin-bottom: 30px;
     padding: 10px;
     padding-right: 11px;
     text-align: center;
@@ -25,19 +26,71 @@
     margin-right: 20px;
     float: right;
 }
-
+.body-buttonR {
+    margin-right: 15px;
+    margin-top: 0px;
+    float: right;
+}
 .body-buttonL {
-    font-size: 15px;
-    padding: 10px;
+ 
+    margin-left: 15px;
+    margin-top: 0px;
+    float: left;
+}
+.react-contextmenu--visible .MuiButton-root {
+    width: 120px;
+}
+
+.dropC{
+    margin-left: 30%;
+    margin-top: -10px;
+  }
+  .body-textL {
     margin-left: 20px;
-    margin-top: 70px;
     float: left;
 }
 
-.body-buttonR {
-    font-size: 15px;
-    padding: 10px;
+.body-textR {
     margin-right: 20px;
-    margin-top: 70px;
     float: right;
+}
+.body-buttonR {
+    margin-right: 15px;
+    margin-top: 0px;
+    float: right;
+}
+.body-buttonL {
+ 
+    margin-left: 15px;
+    margin-top: 0px;
+    float: left;
+}
+.card-cil{
+    font-size: 17px;
+    min-width: 650px;
+    height: 280px;
+}
+.body-textL2 {
+    text-align: left;
+}
+
+.body-textR2 {
+    margin-right: 90px;
+    margin-top: 0px;
+    text-align: left;
+    float: right;
+}
+.body-buttonR2 {
+    margin-right: 15px;
+    margin-top: 0px;
+    float: right;
+}
+.body-buttonL2 {
+ 
+    margin-left: 15px;
+    margin-top: 0px;
+    float: left;
+}
+.hope{
+    margin-top: 95px;
 }

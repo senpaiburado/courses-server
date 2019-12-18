@@ -133,7 +133,7 @@ body {
     background: url("../images/profileB.png");
     background-repeat: no-repeat;
 }
-
+ 
 .iconTimeTable {
     background: url("../images/TimeTableF.png");
     background-repeat: no-repeat;
@@ -281,6 +281,37 @@ body {
     background: #EF8C94;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 25px;
+}
+.button1 button:hover
+{ 
+    border: none;
+    outline: none;
+    color: #EF8C94;
+    font-weight: bold;
+    padding: px;
+    font-size: 20pt;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 25px;
+}
+.button1 button:active
+{ 
+    border: none;
+    outline: none;
+    color: #EF8C94;
+    font-weight: bold;
+    padding: px;
+    font-size: 20pt;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background: white;
+  box-shadow: none;
+border-radius: 25px;
+
 }
 .name
 {
@@ -503,3 +534,4 @@ margin-left: 20px;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
   }
+ 
