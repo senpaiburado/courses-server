@@ -41,7 +41,7 @@ export class LoginFormComponent extends React.Component {
         }
         this.setState({ authProccesing: true });
         try {
-            let response = await fetch("http://localhost:8080/user/login", {
+            let response = await fetch("http://10.0.1.141:8080/user/login", {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json",

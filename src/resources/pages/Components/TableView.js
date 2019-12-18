@@ -8,6 +8,10 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { border } from '@material-ui/system';
 import { ContextMenu, MenuItem, ContextMenuTrigger } from "react-contextmenu";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import DropDawnView from "./DropDawnView";
+import { Button } from '@material-ui/core';
+
 const StyledTableCell = withStyles(theme => ({
   head: {
     backgroundColor: theme.palette.common.black,
@@ -98,13 +102,13 @@ export default function CustomizedTables() {
             </StyledTableCell>
             <StyledTableCell align="left"><ContextMenuTrigger id="some_unique_identifier">{row.wednesday}</ContextMenuTrigger>
             </StyledTableCell>
-            <StyledTableCell align="left"><ContextMenuTrigger id="some_unique_identifier">{row.thursday}</ContextMenuTrigger>
+            <StyledTableCell align="left"><ContextMenuTrigger id="some_one_unique_identifier">{row.thursday}</ContextMenuTrigger>
             </StyledTableCell>
-            <StyledTableCell align="left"><ContextMenuTrigger id="some_unique_identifier">{row.friday}</ContextMenuTrigger>
+            <StyledTableCell align="left"><ContextMenuTrigger id="some_one_unique_identifier">{row.friday}</ContextMenuTrigger>
             </StyledTableCell>
-            <StyledTableCell align="left"><ContextMenuTrigger id="some_unique_identifier">{row.saturday}</ContextMenuTrigger>
+            <StyledTableCell align="left"><ContextMenuTrigger id="some_one_unique_identifier">{row.saturday}</ContextMenuTrigger>
             </StyledTableCell>
-            <StyledTableCell align="left"><ContextMenuTrigger id="some_unique_identifier">{row.sunday}</ContextMenuTrigger>
+            <StyledTableCell align="left"><ContextMenuTrigger id="some_one_unique_identifier">{row.sunday}</ContextMenuTrigger>
             </StyledTableCell>
 
           </StyledTableRow>
@@ -123,13 +127,47 @@ export default function CustomizedTables() {
           10:00
         </div>
         <div className="clear"></div>
-        
+        <DropDawnView/> 
         <div className="clear"></div>
-        <button className="body-buttonL">Сохранить</button>
-        <button className="body-buttonR">Отмена</button>
+        <div  className="body-buttonL">
+        <Button variant="contained">Сохранить</Button>
+        </div>
+        <div  className="body-buttonR">
+        <Button variant="contained">Отмена</Button>
+        </div>
         </div>
       </ContextMenu>  
-    </Table>
+    
+      <ContextMenu id="some_one_unique_identifier"  className="head-text card-cil">
+      <div className="head-text " data={{ foo: 'bar' }} onClick={handleClick}>
+      Регулярный урок (1937392)
+      </div>
+      <div className="container">
+      <div className="row">
+        
+      <div className="col-4 body-textL2">
+        <p>Ученик:</p>
+        <p>Время:</p>
+        <p>Ответственный  :</p>
+        <p>Родетель:</p>
+      </div>
+      <MenuItem divider />
+      <div className="col-5 body-textL2" data={{ foo: 'bar' }} onClick={handleClick}>
+      <p>Ярема Вадим (13739)</p>  
+      <p>Пятница 9:00</p>
+      <p>Владимер Ленин</p>
+      <p>Romel</p>
+      </div>
+      <div  className="col-2">
+        <Button variant="contained">Сохранить</Button>
+        <div  className="hope">
+        <Button variant="contained">Отмена</Button>
+        </div>
+        </div>
+      </div>
+      </div>
+    </ContextMenu>  
+  </Table>
 
 
   );

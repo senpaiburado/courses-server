@@ -30,7 +30,7 @@ export class Profile extends React.Component {
             if (!cookies || !cookies.cookieKey) {
                 location.href = "/";
             }
-            let response = await fetch("http://localhost:8080/user/info?cookie=" + String(cookies.cookieKey), {
+            let response = await fetch("http://10.0.1.141:8080/user/info?cookie=" + String(cookies.cookieKey), {
                 method: 'GET',
             });
             if (response.ok) {
@@ -68,21 +68,18 @@ export class Profile extends React.Component {
                         <div className="exit button1">
                             <button href="#">ВЫХОД</button>
                         </div>
-
                     </div>
-
                     <div className="box4">
                         <div className="box-card2">
                             <div className="h-on-card">ОСНОВНОЕ</div>
                             <p>
+                                <img className="personData" src={require("../../images/id.png")} alt=""></img>
+                                <div className="personDataText">{this.state.id}</div>
+                            </p>
+                            <p>
                                 <img className="personData" src={require("../../images/birthday.png")} alt=""></img>
                                 <div className="personDataText">{this.state.birthdate ? new Date(this.state.birthdate).to : ""}</div>
                             </p>
-                            <p>
-                                <img className="personData" src={require("../../images/MyCity.png")} alt=""></img>
-                                <div className="personDataText">{this.state.id}</div>
-                            </p>
-
                         </div>
 
                         <div className="box-card2">
