@@ -8,7 +8,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { border } from '@material-ui/system';
 import { ContextMenu, MenuItem, ContextMenuTrigger } from "react-contextmenu";
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import DropDawnView from "./DropDawnView";
 import { Button } from '@material-ui/core';
 
@@ -96,9 +96,7 @@ export default function CustomizedTables() {
           <StyledTableRow key={row.name}>
 
             {/* NOTICE: id must be unique for EVERY instance */}
-            <StyledTableCell align="left"><ContextMenuTrigger id="some_unique_identifier">{row.monday}<StyledTableCell align="left"><ContextMenuTrigger id="some_unique_identifier">{row.monday}</ContextMenuTrigger>
-            </StyledTableCell><StyledTableCell align="left"><ContextMenuTrigger id="some_unique_identifier">{row.monday}</ContextMenuTrigger>
-            </StyledTableCell></ContextMenuTrigger>
+            <StyledTableCell align="left"><ContextMenuTrigger id="some_unique_identifier">{row.monday}</ContextMenuTrigger>
             </StyledTableCell>
             <StyledTableCell align="left"><ContextMenuTrigger id="some_unique_identifier">{row.tuesday}</ContextMenuTrigger>
             </StyledTableCell>
@@ -144,30 +142,29 @@ export default function CustomizedTables() {
       <div className="head-text " data={{ foo: 'bar' }} onClick={handleClick}>
       Регулярный урок (1937392)
       </div>
-      <div className="container">
-      <div className="row">
-        
-      <div className="col-4 body-textL2">
+      <div className="cardN">
+
+      <div className=" body-textL2">
         <p>Ученик:</p>
         <p>Время:</p>
         <p>Ответственный  :</p>
         <p>Родетель:</p>
       </div>
       <MenuItem divider />
-      <div className="col-5 body-textL2" data={{ foo: 'bar' }} onClick={handleClick}>
+      <div className=" body-textL2" data={{ foo: 'bar' }} onClick={handleClick}>
       <p>Ярема Вадим (13739)</p>  
       <p>Пятница 9:00</p>
       <p>Владимер Ленин</p>
       <p>Romel</p>
       </div>
-      <div  className="col-2">
+      <div  className="body-buttonL2">
         <Button variant="contained">Сохранить</Button>
         <div  className="hope">
         <Button variant="contained">Отмена</Button>
         </div>
         </div>
       </div>
-      </div>
+    
     </ContextMenu>  
   </Table>
 

@@ -75,13 +75,19 @@
 }
 .card-cil{
     font-size: 17px;
-    min-width: 650px;
+    min-width: 550px;
     height: 280px;
 }
 .body-textL2 {
+    display: flex; /* or inline-flex */
+    flex-direction: column;
+}
+.cardN{
+    display: flex; /* or inline-flex */
+    flex-direction: row;
+    justify-content: space-between;
     text-align: left;
 }
-
 .body-textR2 {
     margin-right: 90px;
     margin-top: 0px;
@@ -90,14 +96,11 @@
 }
 .body-buttonR2 {
     margin-right: 15px;
-    margin-top: 0px;
+    margin-top:0px;
     float: right;
 }
 .body-buttonL2 {
- 
-    margin-left: 15px;
-    margin-top: 0px;
-    float: left;
+    margin-top: 15px;
 }
 .hope{
     margin-top: 95px;
