@@ -43,7 +43,7 @@ background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, F
     -o-background-size: 100%;
     background-size: 100%;
     text-align: center;
-    padding: 200px 0;
+    padding: 150px 0;
 }
 
 .logo {
@@ -79,7 +79,7 @@ background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, F
 	text-transform:uppercase;
 	line-height:25px;
     /* margin-bottom:20px; */
-    margin-top: 100px;
+    margin-top: 60px;
 	transition:all 0.3s ease-in-out;
 	-moz-transition:all 0.3s ease-in-out;
 	-webkit-transition:all 0.3s ease-in-out;

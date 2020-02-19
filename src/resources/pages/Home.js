@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/anchor-is-valid */   
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import { Link } from 'react-router-dom';
@@ -14,7 +14,7 @@ export default class Home extends React.Component {
             if (cookies.isStudent)
                 return "/student";
             return "/teacher";
-        }
+        } 
         return "/auth";
     }
 

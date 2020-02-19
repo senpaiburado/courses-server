@@ -1,3 +1,4 @@
+
 html,
 body {
     background-color: white;
@@ -5,6 +6,7 @@ body {
     /* overflow-y: scroll;  */
     height: 100%;
     margin: 0;
+    
 }
 
 .box-spase * {
@@ -69,7 +71,7 @@ body {
   
     display: block;
     position: absolute;
-    width: 110px;
+    width: 120px;
     left: -100px;
     z-index: 49;
     height: 100%;
@@ -393,11 +395,6 @@ margin-left: 20px;
     transition: 0.4s;
     font-weight: bold;
   }
-  
-  .active, .accordion:hover {
-      
-  }
-  
   .panel {
     text-align: left;
     padding: 0 38px;
@@ -522,6 +519,7 @@ margin-left: 20px;
   .arrau
   {
     padding: 20px;
+    text-decoration: none;
   }
 
   .MuiTypography-body1 {
@@ -534,4 +532,103 @@ margin-left: 20px;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
   }
- 
+.VideoIcon{
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  display: grid ;
+  grid-template-columns :[luft] 1% [inf] 5% [prev] 50% [tools] 10% [infend] 5% [next] 28% [img];
+  grid-template-rows:[luft] 1% [luftend]  10% [textFile] 15% [img1] 2% [luft1] 9% [iconV] 11% [img2] 25% [endimg] ;
+}
+
+.item_video1{
+grid-column-start: infend;
+grid-column-end:img;
+grid-row-start: luftend;
+grid-row-end: span img1;
+}
+.item_video2{
+
+  grid-column-start: infend;
+  grid-column-end:img;
+  grid-row-start: img2;
+  grid-row-end: endimg;
+  }
+  
+  .textItem{
+    grid-column-start: inf;
+    grid-column-end: infend;
+    grid-row-start: luftend;
+    grid-row-end: img1;
+    text-align: center;
+    font-size: 30pt;
+    font-weight: bold;
+  }
+  .scrollItem{
+    grid-column-start: inf;
+    grid-column-end: infend;
+    grid-row-start: textFile ;
+    grid-row-end: img1;
+    text-align: center;
+    font-size: 60pt;
+    font-weight: bold;
+    opacity: 0.5;
+  }
+  .scrollItem2{
+    grid-column-start: inf;
+    grid-column-end:span tools;
+    grid-row-start: img1;
+    grid-row-end: span  endimg;
+    border-left:5px solid rgba(0, 0, 0, 0.3);
+    border-top: 5px solid rgba(0, 0, 0, 0.3);;
+    border-bottom:5px solid rgba(0, 0, 0, 0.3); 
+  }
+  .tools{
+    background-color: gray;
+    grid-column-start: tools;
+    grid-column-end: infend;
+    grid-row-start: img1;
+    grid-row-end: span  endimg;
+    width: 80%;
+    height: 100%;
+    border-right:5px solid rgba(0, 0, 0, 0.3);
+    border-top: 5px solid rgba(0, 0, 0, 0.3);
+    border-bottom:5px solid rgba(0, 0, 0, 0.3);
+  }
+  .paint_icon{
+    margin-top: 5%;
+    margin-left: 10%;
+  }
+ .Videoicon{
+  grid-column-start: infend;
+  grid-column-end: img;
+  grid-row-start: luft1;
+  grid-row-end: iconV;
+
+ }
+ .prev1 {
+  grid-column-start: prev;
+  grid-column-end: next;
+  grid-row-start: textFile ;
+  grid-row-end: img1;
+   color: #000;
+   text-decoration: none;
+   font-weight: bold; 
+   font-size: 60pt;
+   border-radius: 0 3px 3px 0;
+   user-select: none;
+   -webkit-user-select: none;
+ }
+ .next1 {
+  grid-column-start: tools;
+  grid-column-end: next;
+  grid-row-start: textFile ;
+  grid-row-end: img1;
+   color: #000;
+   text-decoration: none;
+   font-weight: bold; 
+   font-size: 60pt;
+   border-radius: 0 3px 3px 0;
+   user-select: none;
+   -webkit-user-select: none;
+ }

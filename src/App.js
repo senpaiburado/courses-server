@@ -10,6 +10,8 @@ import {
 import Home from './resources/pages/Home';
 import {AuthPage} from './resources/pages/AuthPage';
 import { TeacherCabinet } from "./resources/pages/TeacherCabinet";
+import { ChildrenCabinet } from "./resources/pages/ChildrenCabinet";
+import { Video,VideoR } from "./resources/pages/Components/Video";
 
 export default function App() {
   return (  
@@ -22,6 +24,15 @@ export default function App() {
           </Route>
           <Route path="/teacher">
             <TeacherCabinet/>
+          </Route>
+          <Route path="/student">
+            <ChildrenCabinet/>
+          </Route>
+          <Route path="/video">
+            <Video/>
+          </Route>
+          <Route path="/videoR">
+            <VideoR/>
           </Route>
           <Route path="/">
             <Home />

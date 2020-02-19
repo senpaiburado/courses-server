@@ -28,9 +28,10 @@ export class Profile extends React.Component {
         try {
             let cookies = new Cookies().get("cookies");
             if (!cookies || !cookies.cookieKey) {
-                location.href = "/";
+                // TO-DO: Uncomment this when API server is working
+                // location.href = "/"; 
             }
-            let response = await fetch("http://10.0.1.141:8080/user/info?cookie=" + String(cookies.cookieKey), {
+            let response = await fetch("http://127.0.0.1:8080/user/info?cookie=" + String(cookies.cookieKey), {
                 method: 'GET',
             });
             if (response.ok) {

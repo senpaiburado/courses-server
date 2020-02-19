@@ -14,12 +14,13 @@ import {
 import "../css/TeacherCabinet.css"
 
 import { Profile } from "./Components/Profile";
-import { Files } from "./Components/Files";
 import { Timetable } from "./Components/Timetable";
-import { Registry } from "./Components/Registry";
+import { Files } from "./Components/Files";
+import { Homework } from "./Components/Homework";
+import { VideoR,Video } from "./Components/Video";
 import Cookies from 'universal-cookie';
 
-export class TeacherCabinet extends React.Component {
+export class ChildrenCabinet extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -56,37 +57,41 @@ export class TeacherCabinet extends React.Component {
                         </div>
                     </div>) : ''}
                     <div className="menu">
-                        <Link to="/teacher">
+                        <Link to="/student">
                             <div className="menu1 iconProfile"></div>
                         </Link>
-                        <Link to="/teacher/timetable">
+                        <Link to="/student/timetable">
                             <div className="menu1 iconTimeTable"></div>
                         </Link>
-                        <Link to="/teacher/files">
+                        <Link to="/student/files">
                             <div className="menu1 iconFile"></div>
-                        </Link>
-                        <Link to="/teacher/registry" >
+                        </Link> 
+                        <Link to="/student/homework" >
                             <div className="menu1 iconRegistry"></div>
                         </Link>
-                       
+                        <Link to="/student/Video" >
+                            <div className="menu1 iconRegistry"></div>
+                        </Link>
                     </div>
-                    <Link to="/teacher/registry" >
+                    <Link to="/student/homework" >
                     <div className="exit1 menu2" onClick={ () => { location.href = "/" } }></div>
                     </Link>
                 </div>
                 <Switch>
-                    <Route exact path="/teacher">
+                    <Route exact path="/student">
                         <Profile />
                     </Route>
-                    <Route path="/teacher/files">
-                        <Files />
-                    </Route>
-                    <Route path="/teacher/timetable">
+               
+                    <Route path="/student/timetable">
                         <Timetable />
                     </Route>
-                    <Route path="/teacher/Registry">
-                        <Registry />
+                    <Route path="/student/files">
+                        <Files />
                     </Route>
+                    <Route path="/student/homework">
+                        <Homework />
+                    </Route>
+                    <Route path="/student/Video"></Route>
                 </Switch>
 
             </div>
