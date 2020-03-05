@@ -25,6 +25,7 @@ export class ChildrenCabinet extends React.Component {
         super(props);
         this.state = {
             isMenuOpened: false
+            
         }
         // new Cookies().remove("cookies")
     }
